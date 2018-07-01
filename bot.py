@@ -113,6 +113,7 @@ if __name__ == '__main__':
                     else:
                         if parent_data:
                             sql_insert_has_parent(comment_id, parent_id, parent_data, body, subreddit, created_utc, score)
+                            paired_rows += 1
                         else:
                             sql_insert_no_parent(comment_id, parent_id, body, subreddit, created_utc, score)
 
